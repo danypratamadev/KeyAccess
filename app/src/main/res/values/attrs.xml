@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="ds">
+
+        <attr name="backToolbar" format="color"></attr>
+        <attr name="backGray50" format="color"></attr>
+        <attr name="backWhite" format="color"></attr>
+        <attr name="backRippleGray300" format="color"></attr>
+        <attr name="textGray700" format="color"></attr>
+        <attr name="textGray800" format="color"></attr>
+        <attr name="backBgBlueDark" format="color"></attr>
+        <attr name="tintColor" format="color"></attr>
+        <attr name="buttonColor" format="color"></attr>
+        <attr name="iconWhite" format="color"></attr>
+        <attr name="disableIcon" format="color"></attr>
+        <attr name="buttonColorBlue" format="color"></attr>
+        <attr name="buttonColorUngu" format="color"></attr>
+        <attr name="buttonColorPink" format="color"></attr>
+
+    </declare-styleable>
+
+</resources>

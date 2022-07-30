@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/White"
+    tools:context=".VerificationActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/backToolbar"
+        android:elevation="@dimen/_3sdp">
+
+        <ImageButton android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_keyboard_backspace_black_24dp"
+            android:tint="?attr/textGray800"
+            android:background="@drawable/back_blue_round"
+            android:padding="@dimen/_7sdp"
+            android:layout_centerVertical="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Account setup"
+            android:textSize="@dimen/_16ssp"
+            android:textStyle="bold"
+            android:textColor="?attr/textGray800"
+            android:fontFamily="@font/google_sans"
+            android:paddingStart="@dimen/_10sdp"
+            android:layout_centerVertical="true"/>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/_55sdp"
+                android:layout_height="@dimen/_55sdp"
+                android:padding="@dimen/_15sdp"
+                android:background="@drawable/back_blue_round"
+                android:backgroundTint="@color/Gray50"
+                android:src="@drawable/ic_person_black_36dp"
+                android:tint="@color/TweetIconDisable"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:layout_gravity="center"/>
+
+            <TextView
+                android:id="@+id/number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_13ssp"
+                android:text="+6287706085909"
+                android:textStyle="bold"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:textColor="@color/Gray700"
+                android:fontFamily="@font/google_sans"
+                android:textAlignment="center"
+                android:layout_marginStart="@dimen/_25sdp"
+                android:layout_marginEnd="@dimen/_25sdp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_18ssp"
+                android:text="Enter verification code"
+                android:layout_marginTop="@dimen/_35sdp"
+                android:textColor="?attr/textGray800"
+                android:fontFamily="@font/google_sans"
+                android:textAlignment="center"
+                android:layout_marginStart="@dimen/_25sdp"
+                android:layout_marginEnd="@dimen/_25sdp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Please enter the verification code that has \nbeen sent to your phone number."
+                android:textSize="@dimen/_12ssp"
+                android:textColor="@color/Gray700"
+                android:fontFamily="@font/sans_ui"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:layout_marginStart="@dimen/_25sdp"
+                android:layout_marginEnd="@dimen/_25sdp"
+                android:layout_marginBottom="@dimen/_40sdp"
+                tools:ignore="RtlCompat"/>
+
+            <com.goodiebag.pinview.Pinview
+                android:id="@+id/pinCode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:pinWidth="@dimen/_27sdp"
+                app:pinHeight="@dimen/_30sdp"
+                app:pinLength="6"
+                app:cursorVisible="true"
+                app:forceKeyboard="true"
+                app:inputType="number"
+                app:password="false"
+                android:layout_marginStart="@dimen/_25sdp"
+                android:layout_marginEnd="@dimen/_25sdp"
+                android:layout_marginBottom="@dimen/_20sdp"/>
+
+            <ProgressBar
+                android:id="@+id/verify"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_5sdp"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:indeterminate="true"
+                android:indeterminateTint="@color/TweetIconDisable"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/_25sdp"
+                android:layout_marginStart="@dimen/_40sdp"
+                android:layout_marginEnd="@dimen/_40sdp"/>
+
+            <LinearLayout
+                android:id="@+id/resend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="@dimen/_50sdp">
+
+                <ProgressBar
+                    android:id="@+id/load"
+                    android:layout_width="@dimen/_18sdp"
+                    android:layout_height="@dimen/_18sdp"
+                    android:layout_gravity="center"
+                    android:indeterminate="true"
+                    android:indeterminateTint="@color/TweetIconDisable"/>
+
+                <TextView
+                    android:id="@+id/time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sending verification code..."
+                    android:textSize="@dimen/_11ssp"
+                    android:textColor="@color/TweetIconDisable"
+                    android:fontFamily="@font/sans_ui"
+                    android:paddingTop="@dimen/_7sdp"
+                    android:paddingBottom="@dimen/_7sdp"
+                    android:paddingStart="@dimen/_20sdp"
+                    android:paddingEnd="@dimen/_20sdp"
+                    android:background="@drawable/back_btn_sign_in_up"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

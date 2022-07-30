@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/White"
+    tools:context=".InvitationActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/backToolbar"
+        android:elevation="@dimen/_3sdp">
+
+        <ImageButton android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_keyboard_backspace_black_24dp"
+            android:tint="?attr/textGray800"
+            android:background="@drawable/back_blue_round"
+            android:padding="@dimen/_7sdp"
+            android:layout_centerVertical="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Invitation"
+            android:textSize="@dimen/_16ssp"
+            android:textStyle="bold"
+            android:textColor="?attr/textGray800"
+            android:fontFamily="@font/google_sans"
+            android:paddingStart="@dimen/_10sdp"
+            android:layout_centerVertical="true"/>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:id="@+id/parentView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/backWhite"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/photo_up"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="@dimen/_100sdp"
+                app:cardElevation="0dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_30sdp">
+
+                <ImageView
+                    android:id="@+id/photo"
+                    android:layout_width="@dimen/_55sdp"
+                    android:layout_height="@dimen/_55sdp"
+                    android:src="@drawable/ic_near_me_black_36dp"
+                    android:tint="@color/TweetIconDisable"
+                    android:background="@color/Gray50"
+                    android:scaleType="centerCrop"
+                    android:padding="@dimen/_15sdp"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Have an invitation code?"
+                android:textSize="@dimen/_18ssp"
+                android:textColor="@color/Black"
+                android:fontFamily="@font/google_sans"
+                android:textAlignment="center"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/_25sdp"
+                android:layout_marginEnd="@dimen/_25sdp"
+                android:layout_marginTop="@dimen/_20sdp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="If your family give you an invitation code,\nenter it to access your private home."
+                android:textSize="@dimen/_12ssp"
+                android:textColor="@color/Gray700"
+                android:fontFamily="@font/sans_ui"
+                android:textAlignment="center"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:layout_marginStart="@dimen/_25sdp"
+                android:layout_marginEnd="@dimen/_25sdp"
+                android:layout_marginBottom="@dimen/_40sdp"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_25sdp"
+                android:layout_marginEnd="@dimen/_25sdp">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/ti_code"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    android:hint="Type your code"
+                    app:counterEnabled="true"
+                    app:counterMaxLength="6"
+                    app:helperText="*optional"
+                    app:helperTextEnabled="true">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/code"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_45sdp"
+                        android:textSize="@dimen/_14ssp"
+                        android:inputType="textCapCharacters"
+                        android:fontFamily="@font/google_sans"
+                        android:maxLength="6"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <ProgressBar
+                    android:id="@+id/progress"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_44sdp"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:layout_marginEnd="@dimen/_12sdp"
+                    android:layout_alignParentEnd="true"/>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/_50sdp"
+                android:layout_marginStart="@dimen/_25sdp"
+                android:layout_marginEnd="@dimen/_25sdp"
+                android:layout_marginBottom="@dimen/_50sdp">
+
+                <Button
+                    android:id="@+id/skip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_40sdp"
+                    android:text="I don't have"
+                    android:textColor="@color/Gray600"
+                    android:textAllCaps="false"
+                    android:textSize="@dimen/_14ssp"
+                    android:fontFamily="@font/google_sans"
+                    android:background="@color/White"
+                    android:stateListAnimator="@null"
+                    android:paddingEnd="@dimen/_15sdp"/>
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"/>
+
+                <Button
+                    android:id="@+id/next"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_35sdp"
+                    android:text="Next"
+                    android:textColor="@color/White"
+                    android:textAllCaps="false"
+                    android:textSize="@dimen/_14ssp"
+                    android:fontFamily="@font/google_sans"
+                    android:background="@drawable/back_button"
+                    android:stateListAnimator="@null"
+                    android:paddingStart="@dimen/_10sdp"
+                    android:paddingEnd="@dimen/_10sdp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

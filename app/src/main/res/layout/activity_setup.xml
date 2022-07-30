@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?attr/backWhite"
+        android:orientation="vertical"
+        tools:context=".SetupActivity">
+
+    <androidx.appcompat.widget.Toolbar android:id="@+id/toolbar"
+                                       android:layout_width="match_parent"
+                                       android:layout_height="wrap_content"
+                                       android:elevation="@dimen/_3sdp"
+                                       android:background="?attr/backToolbar">
+
+        <ImageButton android:id="@+id/back"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:src="@drawable/ic_keyboard_backspace_black_24dp"
+                     android:tint="?attr/textGray800"
+                     android:background="@drawable/back_blue_round"
+                     android:padding="@dimen/_7sdp"
+                     android:layout_centerVertical="true"/>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Setup Door"
+                android:textSize="@dimen/_16ssp"
+                android:textStyle="bold"
+                android:textColor="?attr/textGray800"
+                android:fontFamily="@font/google_sans"
+                android:paddingStart="@dimen/_10sdp"
+                android:layout_centerVertical="true"/>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.core.widget.NestedScrollView android:layout_width="match_parent"
+                                           android:layout_height="wrap_content"
+                                           android:layout_below="@+id/toolbar"
+                                           app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout android:id="@+id/parentView"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:orientation="vertical">
+
+            <TextView android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:text="Enter a doorlock name"
+                      android:textSize="@dimen/_15ssp"
+                      android:fontFamily="@font/google_sans"
+                      android:textColor="?attr/textGray800"
+                      android:layout_marginTop="@dimen/_30sdp"
+                      android:layout_marginStart="@dimen/_25sdp"
+                      android:layout_marginEnd="@dimen/_25sdp"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/ti_door_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Door name"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    app:counterEnabled="true"
+                    app:counterMaxLength="20"
+                    app:helperText="Pintu Depan"
+                    app:helperTextEnabled="true"
+                    android:layout_marginTop="@dimen/_7sdp"
+                    android:layout_marginStart="@dimen/_25sdp"
+                    android:layout_marginEnd="@dimen/_25sdp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/door_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_45sdp"
+                        android:textSize="@dimen/_14ssp"
+                        android:inputType="textPersonName"
+                        android:fontFamily="@font/google_sans"
+                        android:maxLength="20"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:text="User"
+                      android:textSize="@dimen/_15ssp"
+                      android:fontFamily="@font/google_sans"
+                      android:textColor="?attr/textGray800"
+                      android:layout_marginTop="@dimen/_25sdp"
+                      android:layout_marginStart="@dimen/_25sdp"
+                      android:layout_marginEnd="@dimen/_25sdp"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/ti_user_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Name"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    app:counterEnabled="true"
+                    app:counterMaxLength="20"
+                    app:helperText="*required"
+                    app:helperTextEnabled="true"
+                    android:layout_marginTop="@dimen/_7sdp"
+                    android:layout_marginStart="@dimen/_25sdp"
+                    android:layout_marginEnd="@dimen/_25sdp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/user_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_45sdp"
+                        android:textSize="@dimen/_14ssp"
+                        android:inputType="textPersonName"
+                        android:fontFamily="@font/google_sans"
+                        android:maxLength="20"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:text="Device Intaslled"
+                      android:textSize="@dimen/_15ssp"
+                      android:fontFamily="@font/google_sans"
+                      android:textColor="?attr/textGray800"
+                      android:layout_marginStart="@dimen/_25sdp"
+                      android:layout_marginEnd="@dimen/_25sdp"
+                      android:layout_marginTop="@dimen/_25sdp"/>
+
+            <TextView android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Scan the QR code on the device intalled on your door for pairing process."
+                android:textSize="@dimen/_11ssp"
+                android:fontFamily="@font/sans_ui"
+                android:textColor="?attr/textGray700"
+                android:layout_marginStart="@dimen/_25sdp"
+                android:layout_marginEnd="@dimen/_25sdp"
+                android:layout_marginTop="@dimen/_5sdp"/>
+
+            <pl.droidsonroids.gif.GifImageView
+                    android:id="@+id/qr_code_gif"
+                    android:layout_width="@dimen/_130sdp"
+                    android:layout_height="@dimen/_130sdp"
+                    android:src="@drawable/qrcode_scan"
+                    android:scaleType="centerCrop"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/_15sdp"/>
+
+            <TextView
+                android:id="@+id/scan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Scan here"
+                android:textSize="@dimen/_12ssp"
+                android:textColor="@color/TweetIconEnable"
+                android:fontFamily="@font/google_sans"
+                android:paddingStart="@dimen/_20sdp"
+                android:paddingEnd="@dimen/_20sdp"
+                android:paddingTop="@dimen/_7sdp"
+                android:paddingBottom="@dimen/_7sdp"
+                android:layout_gravity="center"/>
+
+            <ImageView android:id="@+id/qr_code"
+                       android:layout_width="@dimen/_150sdp"
+                       android:layout_height="@dimen/_150sdp"
+                       android:layout_marginTop="@dimen/_20sdp"
+                       android:layout_gravity="center"/>
+
+            <TextView android:id="@+id/result_dis"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:textSize="@dimen/_11ssp"
+                      android:textStyle="bold"
+                      android:fontFamily="@font/google_sans"
+                      android:textAlignment="center"
+                      android:textColor="?attr/textGray800"
+                      android:layout_gravity="center"
+                      android:layout_marginStart="@dimen/_25sdp"
+                      android:layout_marginEnd="@dimen/_25sdp"
+                      android:layout_marginBottom="@dimen/_70sdp"/>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <Button android:id="@+id/finish"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_45sdp"
+            android:text="Finish"
+            android:textSize="@dimen/_14ssp"
+            android:textStyle="bold"
+            android:textColor="@color/White"
+            android:textAllCaps="false"
+            android:fontFamily="@font/google_sans"
+            android:background="@color/TweetIconEnable"
+            android:layout_alignParentBottom="true"
+            android:clickable="true"
+            android:foreground="?attr/selectableItemBackgroundBorderless"/>
+
+</RelativeLayout>

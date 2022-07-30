@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="?attr/backWhite"
+        tools:context=".HomeActivity">
+
+    <androidx.appcompat.widget.Toolbar android:id="@+id/toolbar"
+                                       android:layout_width="match_parent"
+                                       android:layout_height="wrap_content"
+                                       android:elevation="@dimen/_3sdp"
+                                       android:background="?attr/backToolbar">
+
+        <RelativeLayout android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="@dimen/_10sdp">
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="KeyAccess"
+                    android:textSize="@dimen/_16ssp"
+                    android:textStyle="bold"
+                    android:textColor="?attr/textGray800"
+                    android:fontFamily="@font/google_sans"
+                    android:layout_centerVertical="true"
+                    android:paddingStart="@dimen/_7sdp"/>
+
+            <ImageButton android:id="@+id/action"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:src="@drawable/ic_more_vert_black_24dp"
+                         android:tint="?attr/textGray800"
+                         android:layout_alignParentEnd="true"
+                         android:background="@drawable/back_blue_round"
+                         android:padding="@dimen/_7sdp"
+                         android:layout_centerVertical="true"/>
+
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.core.widget.NestedScrollView android:layout_width="match_parent"
+                                           android:layout_height="wrap_content"
+                                           android:layout_below="@id/toolbar"
+                                           android:scrollbars="none"
+                                           app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout   android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/homeDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingStart="@dimen/_15sdp"
+                android:paddingEnd="@dimen/_15sdp"
+                android:paddingTop="@dimen/_10sdp"
+                android:paddingBottom="@dimen/_10sdp"
+                android:clickable="true"
+                android:foreground="?attr/selectableItemBackgroundBorderless">
+
+                <com.mikhaellopez.circularimageview.CircularImageView
+                    android:layout_width="@dimen/_60sdp"
+                    android:layout_height="@dimen/_60sdp"
+                    android:layout_gravity="center"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/home_iot"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/_20sdp">
+
+                    <TextView
+                        android:id="@+id/homeName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="My Home"
+                        android:textSize="@dimen/_14ssp"
+                        android:textColor="?attr/textGray800"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/google_sans"/>
+
+                    <TextView
+                        android:id="@+id/homeAddress"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Jl. Siliwangi No. 01 Rt.01 Rw.02 Trini Sinduadi"
+                        android:textSize="@dimen/_10ssp"
+                        android:textColor="?attr/textGray700"
+                        android:fontFamily="@font/sans_ui"
+                        android:maxLines="2"
+                        android:ellipsize="end"
+                        android:layout_marginTop="@dimen/_3sdp"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="All Doors"
+                android:textSize="@dimen/_12ssp"
+                android:textColor="@color/Gray800"
+                android:textStyle="bold"
+                android:fontFamily="@font/google_sans"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_20sdp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_7sdp">
+
+                <include layout="@layout/line_layout"/>
+
+            </LinearLayout>
+
+            <com.yarolegovich.discretescrollview.DiscreteScrollView
+                    android:id="@+id/listDoor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"/>
+
+            <ImageView
+                android:id="@+id/empty"
+                android:layout_width="@dimen/_80sdp"
+                android:layout_height="@dimen/_80sdp"
+                android:src="@drawable/doors"
+                android:tint="@color/Gray200"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/_80sdp"
+                android:layout_marginBottom="@dimen/_15sdp"/>
+
+            <TextView
+                android:id="@+id/empty2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No door registered"
+                android:textSize="@dimen/_12ssp"
+                android:textColor="@color/Gray300"
+                android:textStyle="bold"
+                android:fontFamily="@font/google_sans"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="@dimen/_30sdp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_200sdp"/>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <LinearLayout
+        android:id="@+id/form_action"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/back_home_white"
+        android:backgroundTint="@color/Gray50"
+        android:paddingTop="@dimen/_25sdp"
+        android:paddingBottom="@dimen/_20sdp"
+        android:layout_alignParentBottom="true"
+        android:visibility="invisible"
+        android:animateLayoutChanges="true">
+
+        <TextView
+            android:id="@+id/caption"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:layout_marginBottom="@dimen/_3sdp"
+            android:fontFamily="@font/google_sans"
+            android:textColor="?attr/textGray800"
+            android:textSize="@dimen/_13ssp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/statusDoor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="@dimen/_11ssp"
+            android:textColor="?attr/textGray800"
+            android:fontFamily="@font/google_sans"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:layout_marginBottom="@dimen/_25sdp"
+            android:gravity="center"/>
+
+        <com.ncorti.slidetoact.SlideToActView
+            android:id="@+id/open"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:text="Slide to unlock the door"
+            app:text_size="@dimen/_12ssp"
+            app:text_style="bold"
+            app:text_color="@color/TweetIconDisable"
+            app:text_appearance="@style/TextStyle"
+            app:slider_height="@dimen/_50sdp"
+            app:slider_locked="false"
+            app:area_margin="@dimen/_3sdp"
+            app:outer_color="@color/Blue50"
+            app:inner_color="@color/TweetIconEnable"
+            android:layout_marginStart="@dimen/_18sdp"
+            android:layout_marginEnd="@dimen/_18sdp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/addNew"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:paddingStart="@dimen/_20sdp"
+        android:paddingEnd="@dimen/_15sdp"
+        android:paddingTop="@dimen/_5sdp"
+        android:paddingBottom="@dimen/_5sdp"
+        android:background="@color/Gray100"
+        android:visibility="invisible">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Let's register your door now."
+            android:textSize="@dimen/_12ssp"
+            android:textColor="@color/Gray800"
+            android:fontFamily="@font/google_sans"
+            android:layout_gravity="center_vertical"/>
+
+        <Button
+            android:id="@+id/setupNow"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_30sdp"
+            android:text="Setup Door"
+            android:textColor="@color/White"
+            android:textAllCaps="false"
+            android:textSize="@dimen/_12ssp"
+            android:fontFamily="@font/google_sans"
+            android:background="@drawable/back_button"
+            android:stateListAnimator="@null"
+            android:paddingStart="@dimen/_10sdp"
+            android:paddingEnd="@dimen/_10sdp"
+            android:layout_margin="@dimen/_5sdp"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

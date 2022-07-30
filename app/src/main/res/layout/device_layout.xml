@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+        android:id="@+id/cardHistory"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="?attr/backWhite"
+        app:cardCornerRadius="0dp"
+        app:cardElevation="0dp"
+        android:clickable="true"
+        android:foreground="?android:attr/selectableItemBackground">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="30dp"
+        android:paddingEnd="30dp"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp">
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Dany Pratama"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="?attr/textGray800"
+            android:fontFamily="@font/google_sans"
+            android:maxLines="1"
+            android:ellipsize="end" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                android:id="@+id/startLost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Forced open!"
+                android:textSize="13sp"
+                android:textColor="@color/TweetIconDisable"
+                android:fontFamily="@font/google_sans"
+                android:layout_gravity="center_vertical"/>
+
+            <RelativeLayout
+                android:id="@+id/line"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true">
+
+                    <include layout="@layout/line_layout" />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_portable_wifi_off_black_18dp"
+                    android:tint="@color/Gray300"
+                    android:background="@drawable/back_blue_round"
+                    android:padding="@dimen/_4sdp"
+                    android:layout_centerInParent="true"/>
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/endLost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Forced open!"
+                android:textSize="13sp"
+                android:textColor="@color/TweetIconEnable"
+                android:fontFamily="@font/google_sans"
+                android:layout_gravity="center_vertical"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

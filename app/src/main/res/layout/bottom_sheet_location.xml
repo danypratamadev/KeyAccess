@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal">
+
+    <View
+        android:layout_width="@dimen/_30sdp"
+        android:layout_height="@dimen/_2sdp"
+        android:background="@color/Gray200"
+        android:layout_marginTop="@dimen/_5sdp"/>
+
+    <View
+        android:layout_width="@dimen/_30sdp"
+        android:layout_height="@dimen/_2sdp"
+        android:background="@color/Gray200"
+        android:layout_marginTop="@dimen/_2sdp"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_70sdp"
+        android:src="@drawable/maps_location"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:layout_marginEnd="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_15sdp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/google_sans"
+        android:text="Turn on device location"
+        android:textAlignment="textStart"
+        android:textColor="@color/Gray800"
+        android:textSize="@dimen/_14ssp"
+        android:textStyle="bold"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:layout_marginEnd="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_10sdp"/>
+
+    <TextView
+        android:id="@+id/detailMenuDis"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/sans_ui"
+        android:text="To continue, turn on device location, which uses Google's locaton service."
+        android:textColor="@color/Gray800"
+        android:textSize="@dimen/_11ssp"
+        android:lineSpacingExtra="@dimen/_3sdp"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:layout_marginEnd="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_5sdp"/>
+
+    <Button
+        android:id="@+id/enableLocation"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_35sdp"
+        android:text="Turn on"
+        android:textSize="@dimen/_12ssp"
+        android:textStyle="bold"
+        android:textColor="@color/White"
+        android:fontFamily="@font/google_sans"
+        android:background="@drawable/back_button"
+        android:stateListAnimator="@null"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:layout_marginEnd="@dimen/_15sdp"
+        android:layout_marginBottom="@dimen/_15sdp"
+        android:clickable="true"
+        android:foreground="?attr/selectableItemBackgroundBorderless"/>
+
+</LinearLayout>

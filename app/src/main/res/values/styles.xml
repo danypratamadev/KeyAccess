@@ -1,0 +1,98 @@
+<resources>
+
+    <!-- Base application theme. -->
+
+    <style name="SplashTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/WindowBgActiveDark</item>
+        <item name="colorPrimaryDark">@color/White</item>
+        <item name="colorAccent">@color/TweetIconEnable</item>
+        <item name="backToolbar">@color/White</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+
+    <style name="CameraTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/WindowBgActiveDark</item>
+        <item name="colorPrimaryDark">@color/Black</item>
+        <item name="colorAccent">@color/TweetIconEnable</item>
+        <item name="backToolbar">@color/White</item>
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/WindowBgActiveDark</item>
+        <item name="colorPrimaryDark">@color/Gray50</item>
+        <item name="colorAccent">@color/TweetIconEnable</item>
+        <item name="backToolbar">@color/White</item>
+        <item name="backGray50">@color/Gray100</item>
+        <item name="backWhite">@color/White</item>
+        <item name="backRippleGray300">@color/Gray300</item>
+        <item name="textGray700">@color/Gray700</item>
+        <item name="textGray800">@color/Gray800</item>
+        <item name="backBgBlueDark">@color/WindowBgActiveDark</item>
+        <item name="tintColor">#000000</item>
+        <item name="buttonColor">@color/WindowBgActive</item>
+        <item name="buttonColorBlue">@color/ButtonBlue</item>
+        <item name="buttonColorUngu">@color/ButtonUngu</item>
+        <item name="buttonColorPink">@color/ButtonPink</item>
+        <item name="iconWhite">#FFFFFF</item>
+        <item name="disableIcon">@color/WindowBg</item>
+        <item name="android:windowContentTransitions">true</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+    <style name="DarkTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/WindowBgOver</item>
+        <item name="colorPrimaryDark">@color/WindowBgOver</item>
+        <item name="colorAccent">@color/TweetIconEnable</item>
+        <item name="backToolbar">@color/TweetBackgroundSecondary</item>
+        <item name="backGray50">@color/TweetBackground</item>
+        <item name="backWhite">@color/TweetBackgroundSecondary</item>
+        <item name="backRippleGray300">@color/TweetBackground</item>
+        <item name="textGray700">@color/TweetIconDisable</item>
+        <item name="textGray800">@color/White</item>
+        <item name="backBgBlueDark">@color/TweetBackground</item>
+        <item name="tintColor">#FFFFFF</item>
+        <item name="buttonColor">@color/WindowBgActive</item>
+        <item name="iconWhite">@color/WindowBgActive</item>
+        <item name="disableIcon">@color/Gray300</item>
+        <item name="android:windowContentTransitions">true</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+    <style name="DialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/fade_up_from_position2</item>
+        <item name="android:windowExitAnimation">@anim/fade_down_from_position2</item>
+    </style>
+
+    <style name="AppBottomSheetDialogTheme"
+        parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/AppModalStyle</item>
+    </style>
+
+    <style name="AppModalStyle"
+        parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/back_bottomsheet</item>
+    </style>
+
+    <style name="DialogAnimation2">
+        <item name="android:windowEnterAnimation">@anim/slide_up</item>
+        <item name="android:windowExitAnimation">@anim/slide_down</item>
+    </style>
+
+    <style name="TextStyle">
+        <item name="android:fontFamily">@font/google_sans</item>
+    </style>
+
+    <style name="TabItemStyle" parent="TextAppearance.AppCompat.Widget.ActionBar.Title.Inverse">
+        <item name="android:fontFamily">@font/google_sans</item>
+        <item name="android:textSize">@dimen/_12ssp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+</resources>

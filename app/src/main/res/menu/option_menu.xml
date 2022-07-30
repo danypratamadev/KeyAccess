@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/history"
+          android:title="History"/>
+
+    <item android:id="@+id/users"
+          android:title="User Management"/>
+
+    <item android:id="@+id/door"
+        android:title="Setup New Door"/>
+
+    <item android:id="@+id/setting"
+          android:title="Settings"/>
+
+    <item android:id="@+id/signout"
+          android:title="Sign Out"/>
+
+</menu>

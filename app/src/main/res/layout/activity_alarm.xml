@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/main_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AlarmActivity">
+
+    <com.wang.avi.AVLoadingIndicatorView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_350sdp"
+        style="@style/AVLoadingIndicatorView"
+        app:indicatorName="BallScaleIndicator"
+        app:indicatorColor="@color/Red900"
+        android:alpha="0.3"/>
+
+    <ImageView
+        android:layout_width="@dimen/_70sdp"
+        android:layout_height="@dimen/_70sdp"
+        android:src="@drawable/warning"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_120sdp"/>
+
+    <TextView
+        android:id="@+id/caption"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Warning"
+        android:textSize="@dimen/_22ssp"
+        android:textColor="@color/Gray800"
+        android:textAlignment="center"
+        android:fontFamily="@font/google_sans"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="@dimen/_25sdp"
+        android:layout_marginEnd="@dimen/_25sdp"/>
+
+    <TextView
+        android:id="@+id/doorInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/caption"
+        android:text="Pintu depan is unlocked"
+        android:textAlignment="center"
+        android:fontFamily="@font/sans_ui"
+        android:textSize="@dimen/_12ssp"
+        android:layout_marginStart="@dimen/_25sdp"
+        android:layout_marginEnd="@dimen/_25sdp"
+        android:layout_marginTop="@dimen/_5sdp"/>
+
+</RelativeLayout>

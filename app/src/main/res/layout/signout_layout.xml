@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/back_alert_round"
+    android:layout_gravity="center">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/google_sans"
+        android:text="Sign out"
+        android:textColor="@color/Red800"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:textAlignment="textStart"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginTop="25dp"/>
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/google_sans"
+        android:text="You will be returned to the sign in page."
+        android:textColor="@color/Gray700"
+        android:textSize="16sp"
+        android:layout_marginTop="5dp"
+        android:textAlignment="textStart"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"/>
+
+    <pl.droidsonroids.gif.GifImageView
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:src="@drawable/gif_logout"
+            android:layout_marginTop="10dp" />
+
+    <RelativeLayout android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/Gray300"
+                    android:layout_marginTop="10dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+                android:id="@+id/cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:background="@color/White100T"
+                android:textColor="@color/TweetIconEnable"
+                android:text="Cancel"
+                android:textAllCaps="false"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/google_sans"/>
+
+        <RelativeLayout android:layout_width="0.5dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/Gray300"/>
+
+        <Button
+            android:id="@+id/logout"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@color/White100T"
+            android:textColor="@color/Gray700"
+            android:text="Sign out"
+            android:textAllCaps="false"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/google_sans"/>
+
+    </LinearLayout>
+
+</LinearLayout>

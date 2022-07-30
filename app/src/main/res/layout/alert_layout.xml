@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/back_alert_round"
+        android:layout_gravity="center">
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/google_sans"
+            android:text="Please wait..."
+            android:textColor="?attr/textGray800"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:textAlignment="textStart"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="25dp"
+            android:layout_marginTop="25dp"/>
+
+    <TextView
+            android:id="@+id/caption"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/google_sans"
+            android:text="Enter your email"
+            android:textColor="@color/Gray700"
+            android:textSize="16sp"
+            android:layout_marginTop="5dp"
+            android:textAlignment="textStart"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="25dp"/>
+
+    <RelativeLayout android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="30dp">
+
+        <ProgressBar android:id="@+id/progress"
+                     android:layout_width="45dp"
+                     android:layout_height="45dp"
+                     android:layout_centerVertical="true"
+                     android:layout_centerHorizontal="true"/>
+
+        <ImageView android:id="@+id/result"
+                   android:layout_width="45dp"
+                   android:layout_height="45dp"
+                   android:background="@drawable/back_blue_round"
+                   android:backgroundTint="@color/TweetIconEnable"
+                   android:padding="10dp"
+                   android:tint="@color/White"
+                   android:src="@drawable/ic_done_black_24dp"
+                   android:layout_centerVertical="true"
+                   android:layout_centerHorizontal="true"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

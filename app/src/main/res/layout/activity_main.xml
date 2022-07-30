@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.Toolbar android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="3dp"
+        android:background="?attr/backToolbar">
+
+        <RelativeLayout android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tugas Akhir"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="?attr/textGray800"
+                android:fontFamily="@font/gilroy_bold"
+                android:paddingStart="15dp"
+                android:layout_centerVertical="true"/>
+
+            <ImageButton android:id="@+id/op_action"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_more_vert_black_24dp"
+                android:tint="?attr/textGray800"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/back_blue_round"
+                android:padding="12dp"
+                android:layout_centerVertical="true"/>
+
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello Google!"
+        android:textSize="28sp"
+        android:fontFamily="@font/google_sans"
+        android:textColor="?attr/textGray800"
+        android:layout_gravity="center"
+        android:layout_marginTop="200dp"/>
+
+    <Button
+        android:id="@+id/out"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:text="Help me"
+        android:textSize="16sp"
+        android:textAllCaps="false"
+        android:fontFamily="@font/google_sans"
+        android:background="@drawable/back_button"
+        android:backgroundTint="@color/TweetIconEnable"
+        android:textColor="@color/White"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"/>
+
+</LinearLayout>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+        android:id="@+id/cardHistory"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="?attr/backWhite"
+        app:cardCornerRadius="0dp"
+        app:cardElevation="0dp"
+        android:clickable="true"
+        android:foreground="?android:attr/selectableItemBackground">
+
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="horizontal"
+                  android:paddingStart="30dp"
+                  android:paddingEnd="30dp"
+                  android:paddingTop="15dp"
+                  android:paddingBottom="15dp">
+
+        <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/user" />
+
+        <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_gravity="center"
+                android:paddingStart="20dp">
+
+            <TextView
+                    android:id="@+id/name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Dany Pratama"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="?attr/textGray800"
+                    android:fontFamily="@font/google_sans"
+                    android:maxLines="1"
+                    android:ellipsize="end" />
+
+            <TextView
+                    android:id="@+id/action"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Open the door"
+                    android:textSize="13sp"
+                    android:textColor="@color/TweetIconDisable"
+                    android:fontFamily="@font/google_sans"
+                    android:layout_marginTop="3dp"/>
+
+        </LinearLayout>
+
+        <TextView
+                android:id="@+id/time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="20:20:22"
+                android:textSize="12sp"
+                android:textColor="@color/TweetIconDisable"
+                android:fontFamily="@font/sans_ui" />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
